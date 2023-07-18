@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prectice 1 </title>
+    <style>
+      *{
+        margin: 0px;
+        padding: 0px;
+      }
+      .box-one{
+        width: 100%;
+        max-width: 100px;
+      }
+      .container{
+        display: flex;
+        border: 2px solid tomato;
+        /* height: 100px; */
+        /* weight: 100px; */
+        flex: wrap;
+        justify-content: space-around;
+        align-items: stretch;
+      }
+      .column{
+        flex-basis: 100%;
+        border: 1px solid red;
+        padding: 20px;
+        text-align: center;
+        /* height: 70px; */
+        /* weight: 70px; */
+
+      }
+      /* media query for smaller screen */
+      @media screen and (max-width: 576px){
+        .container{
+            /* grid-template-columns: repeat(1,1fr); */
+            /* flex-basis: 100%; */
+            flex-direction: column;
+        }
+         .box-one{ 
+            max-width: 100%;
+         }
+      }
+      @media screen and (min-width: 992px){
+        .container{
+            grid-template-columns: repeat(1,1fr);
+            /* flex-basis: 50%; */
+            /* flex-direction: row; */
+        }
+      }
+      
+     
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="column box-one">
+            <h2>colum 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quia, fugit cumque modi illo nulla, quos vero placeat animi consequuntur sapiente repellendus qui velit aut quod sit praesentium saepe officiis.</p>
+        </div>
+        <div class="column">
+            <h2>colum 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quia, fugit cumque modi illo nulla, quos vero placeat animi consequuntur sapiente repellendus qui velit aut quod sit praesentium saepe officiis.</p>
+        </div>
+        <div class="column fo">
+            <h2>colum 3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quia, fugit cumque modi illo nulla, quos vero placeat animi consequuntur sapiente repellendus qui velit aut quod sit praesentium saepe officiis.</p>
+        </div>
+    </div>
+</body>
+</html>

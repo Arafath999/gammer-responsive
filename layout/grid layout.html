@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border: 1px solid tomato;
+        }
+        .grid-container{ 
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        /* flex: wrap */
+        /* border: 2px solid tomato; */
+        }
+
+        .item {
+            border: 1px solid aquamarine;
+            /* flex-basis: 100%; */
+            /* width: 100%; */
+            text-align: center;
+        }
+        @media screen and (max-width: 576px) {
+        .container{
+            /* background-color: red; */
+            grid-template-columns: repeat(1, 1fr);
+            background-color: red;
+        }
+    }
+    .image-srr{
+        border: 1px solid black;
+        /* align-items: center; */
+        margin-top: 20px;
+        border-radius: 10px;
+        width: 100%;
+        
+    }
+    .image{ 
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    @media screen and (max-width:576px) {
+        .image{
+            grid-template-columns: repeat(1, 1fr);
+        }
+       
+    }
+    /* swe */
+    .imag-containe{
+        border: 1px solid black;
+        /* align-items: center; */
+        margin-top: 20px;
+        border-radius: 10px;
+        width: 100%;
+        /* height: 100%; */
+        /* align-items: center; */
+    }
+    
+    
+    @media screen and (max-width:576px) {
+        .grid-container{
+            grid-template-columns: repeat(1, 1fr);
+            /* flex-direction: column; */
+            width: 60%;
+        }
+    }
+
+    @media screen and (min-width:992px) {
+        .grid-container{
+            grid-template-columns: repeat(3, 1fr);
+            /* flex-direction: column; */
+            display: flex;
+            /* width: 80%; */
+        }
+        .case{
+            /* grid-template-columns: repeat(3, 1fr); */
+            display: flex;
+        }
+    }
+
+   
+   
+    </style>
+</head>
+
+<body>
+    <h1>layout types border</h1>
+
+    <div class="container">
+        <div class="item">item - 1</div>
+        <div>
+            <div class="item">item - 2</div>
+            <div class="container">
+                <div class="item">item - 3</div>
+                <div class="item">item - 4</div>
+
+            </div>
+            
+        </div>
+
+
+
+
+
+
+    </div>
+    <main>
+        <div class="case">
+        <div class="image">
+            <img class="image-srr" src="./images/tamim.jpg" alt="">
+        </div>
+        <div class="image">
+            <img class="image-srr" src="./images/tamim.jpg" alt="">
+        </div>
+        <div class="image">
+            <img class="image-srr" src="./images/tamim.jpg" alt="">
+        </div>
+        </div>
+        <div class="grid-container">
+        <div class="full-containe">
+            <div class="imag-containe">
+                <img src="./images/person.png" alt="">
+                <h1>item-1</h1>
+                <p>price $100</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero perspiciatis totam, magni accusamus id illum voluptatum nesciunt sequi voluptatem quae quo similique, atque expedita quisquam nam eaque est eum temporibus.</p>
+            </div>
+        </div>    
+        <div class="full-containe">
+            <div class="imag-containe">
+                <img src="./images/person.png" alt="">
+                <h1>item-2</h1>
+                <p>price $100</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero perspiciatis totam, magni accusamus id illum voluptatum nesciunt sequi voluptatem quae quo similique, atque expedita quisquam nam eaque est eum temporibus.</p>
+            </div>
+        </div>    
+        <div class="full-containe">
+            <div class="imag-containe">
+                <img src="./images/person.png" alt="">
+                <h1>item-3</h1>
+                <p>price $100</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero perspiciatis totam, magni accusamus id illum voluptatum nesciunt sequi voluptatem quae quo similique, atque expedita quisquam nam eaque est eum temporibus.</p>
+            </div>
+        </div>
+     </div>   
+    </main>
+</body>
+
+</html>
